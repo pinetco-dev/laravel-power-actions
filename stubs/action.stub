@@ -1,0 +1,26 @@
+<?php
+
+namespace {{ namespace }};
+
+use App\Actions\Action;
+use {{ namespacedModel }};
+
+class {{ class }} extends Action
+{
+    protected {{ model }} ${{ modelVariable }};
+
+    public function __construct({{ model }} ${{ modelVariable }})
+    {
+        $this->{{ modelVariable }} = ${{ modelVariable }};
+    }
+
+    protected function shouldExecute(): bool
+    {
+        return true;
+    }
+
+    protected function handle()
+    {
+        //
+    }
+}
