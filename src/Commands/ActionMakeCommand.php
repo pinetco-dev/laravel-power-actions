@@ -2,8 +2,8 @@
 
 namespace Pinetcodev\LaravelPowerActions\Commands;
 
-use Illuminate\Support\Str;
 use Illuminate\Console\GeneratorCommand;
+use Illuminate\Support\Str;
 use Symfony\Component\Console\Input\InputOption;
 
 class ActionMakeCommand extends GeneratorCommand
