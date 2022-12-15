@@ -1,17 +1,17 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "pinetco-dev/laravel-power-actions",
+    "description": "Laravel power actions package",
     "keywords": [
-        ":vendor_name",
+        "pinetco-dev",
         "laravel",
-        ":package_slug"
+        "laravel-power-actions"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/pinetco-dev/laravel-power-actions",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Raviraj Chauhan",
+            "email": "raviraj@pinetco.com",
             "role": "Developer"
         }
     ],
@@ -35,13 +35,13 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "Pinetcodev\\LaravelPowerActions\\": "src",
+            "Pinetcodev\\LaravelPowerActions\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "Pinetcodev\\LaravelPowerActions\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -61,11 +61,8 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
-            ],
-            "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
-            }
+                "Pinetcodev\\LaravelPowerActions\\LaravelPowerActionsServiceProvider"
+            ]
         }
     },
     "minimum-stability": "dev",
