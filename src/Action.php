@@ -3,9 +3,9 @@
 namespace Pinetcodev\LaravelPowerActions;
 
 use Exception;
-use Illuminate\Support\Str;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Auth\Access\AuthorizationException;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 use Pinetcodev\LaravelPowerActions\Jobs\ExecuteAfterActionJob;
 
 abstract class Action implements ActionContract
@@ -35,7 +35,7 @@ abstract class Action implements ActionContract
 
     public function execute(): ActionContract
     {
-        if (!$this->authorize()) {
+        if (! $this->authorize()) {
             throw new AuthorizationException;
         }
 
@@ -99,13 +99,13 @@ abstract class Action implements ActionContract
 
     protected function catchException(Exception $exception)
     {
-        if (!$this->logException) {
+        if (! $this->logException) {
             return;
         }
 
-        $location = Str::after($exception->getFile(), base_path()) . ':' . $exception->getLine();
+        $location = Str::after($exception->getFile(), base_path()).':'.$exception->getLine();
 
-        $message = class_basename($this) . " action has failed because of {$exception->getMessage()} at \"$location\"";
+        $message = class_basename($this)." action has failed because of {$exception->getMessage()} at \"$location\"";
 
         logger()->error($message);
     }

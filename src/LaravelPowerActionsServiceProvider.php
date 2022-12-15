@@ -2,8 +2,8 @@
 
 namespace Pinetcodev\LaravelPowerActions;
 
-use Spatie\LaravelPackageTools\Package;
 use App\Console\Commands\ActionMakeCommand;
+use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
 class LaravelPowerActionsServiceProvider extends PackageServiceProvider
