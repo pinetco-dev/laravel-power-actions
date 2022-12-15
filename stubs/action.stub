@@ -2,7 +2,7 @@
 
 namespace {{ namespace }};
 
-use App\Actions\Action;
+use Pinetcodev\LaravelPowerActions\Action;
 use {{ namespacedModel }};
 
 class {{ class }} extends Action
